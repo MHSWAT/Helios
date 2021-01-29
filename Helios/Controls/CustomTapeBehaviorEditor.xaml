@@ -1,0 +1,41 @@
+﻿<HeliosSdk:HeliosPropertyEditor
+    x:Class="GadrocsWorkshop.Helios.Controls.CustomTapeBehaviorEditor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Helios="clr-namespace:GadrocsWorkshop.Helios"
+    xmlns:HeliosBase="clr-namespace:GadrocsWorkshop.Helios.Controls"
+    xmlns:HeliosSdk="clr-namespace:GadrocsWorkshop.Helios.Windows.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:GadrocsWorkshop.Helios.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Height="Auto"
+    d:DesignWidth="180"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    mc:Ignorable="d">
+    <Grid Margin="4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="55" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock
+            Grid.Row="2"
+            Grid.Column="0"
+            Style="{StaticResource LegacyPropertyName}">
+            Auto Reload
+        </TextBlock>
+        <CheckBox
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="0,6"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            IsChecked="{Binding Path=Control.ImageRefresh}">
+            <CheckBox.ToolTip>Enable this to reload changed tape image from disk at the expense of a small performance penalty (no caching of images)</CheckBox.ToolTip>
+        </CheckBox>
+    </Grid>
+</HeliosSdk:HeliosPropertyEditor>

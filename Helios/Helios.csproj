@@ -79,6 +79,9 @@
     <Compile Include="Controls\BackgroundImageAppearanceEditor.xaml.cs">
       <DependentUpon>BackgroundImageAppearanceEditor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CustomTapeBehaviorEditor.xaml.cs">
+      <DependentUpon>CustomTapeBehaviorEditor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Special\CalibrationFilter.cs" />
     <Compile Include="Controls\Special\CalibrationFilterBehaviorEditor.xaml.cs">
       <DependentUpon>CalibrationFilterBehaviorEditor.xaml</DependentUpon>
@@ -205,6 +208,10 @@
     <Page Include="Controls\BackgroundImageAppearanceEditor.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CustomTapeBehaviorEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\Special\CalibrationFilterBehaviorEditor.xaml">
       <SubType>Designer</SubType>
